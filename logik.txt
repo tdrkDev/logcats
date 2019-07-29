@@ -1,0 +1,817 @@
+--------- beginning of main
+01-04 11:07:48.169   231   231 I SELinux : SELinux: Loaded service_contexts from:
+01-04 11:07:48.171   231   231 I SELinux :     /plat_service_contexts
+01-04 11:07:48.171   231   231 I SELinux :     /vendor_service_contexts
+01-04 11:07:08.987   236   236 W auditd  : type=1325 audit(0.0:2): table=filter family=2 entries=0
+01-04 11:07:08.987   236   236 W auditd  : type=1325 audit(0.0:3): table=mangle family=2 entries=0
+01-04 11:07:08.987   236   236 W auditd  : type=1325 audit(0.0:4): table=nat family=2 entries=0
+01-04 11:07:08.987   236   236 W auditd  : type=1325 audit(0.0:5): table=raw family=2 entries=0
+01-04 11:07:08.987   236   236 W auditd  : type=1325 audit(0.0:6): table=security family=2 entries=0
+01-04 11:07:08.987   236   236 W auditd  : type=1325 audit(0.0:7): table=filter family=3 entries=0
+01-04 11:07:08.987   236   236 W auditd  : type=1325 audit(0.0:8): table=filter family=10 entries=0
+01-04 11:07:08.987   236   236 W auditd  : type=1325 audit(0.0:9): table=mangle family=10 entries=0
+01-04 11:07:08.987   236   236 W auditd  : type=1325 audit(0.0:10): table=raw family=10 entries=0
+01-04 11:07:09.950   236   236 I auditd  : type=1403 audit(0.0:11): policy loaded auid=4294967295 ses=4294967295
+01-04 11:07:09.970     1     1 I init    : type=1400 audit(0.0:12): avc: denied { read } for name="online" dev="sysfs" ino=34 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:09.970     1     1 I init    : type=1400 audit(0.0:13): avc: denied { open } for name="online" dev="sysfs" ino=34 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:12.480     1     1 I init    : type=1400 audit(0.0:14): avc: denied { setattr } for name="fib_trie" dev="proc" ino=4026539804 scontext=u:r:init:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+01-04 11:07:12.530     1     1 I init    : type=1400 audit(0.0:15): avc: denied { write } for name="enabled" dev="sysfs" ino=19902 scontext=u:r:init:s0 tcontext=u:object_r:sysfs_thermal:s0 tclass=file permissive=1
+01-04 11:07:12.530     1     1 I init    : type=1400 audit(0.0:16): avc: denied { write } for name="online" dev="sysfs" ino=4902 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:12.530     1     1 I init    : type=1400 audit(0.0:17): avc: denied { open } for name="online" dev="sysfs" ino=4902 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:14.399     1     1 I init    : type=1400 audit(0.0:18): avc: denied { setattr } for name="boostpulse" dev="sysfs" ino=20213 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:14.419     1     1 I init    : type=1400 audit(0.0:19): avc: denied { write } for name="tracing_on" dev="debugfs" ino=2100 scontext=u:r:init:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+01-04 11:07:19.449   178   178 I init    : type=1400 audit(0.0:20): avc: denied { getattr } for path="/proc/filesystems" dev="proc" ino=4026539913 scontext=u:r:init:s0 tcontext=u:object_r:proc_filesystems:s0 tclass=file permissive=1
+01-04 11:07:19.449   178   178 W init    : type=1300 audit(0.0:20): arch=40000028 syscall=197 per=800008 success=yes exit=0 a0=d a1=bedf6490 a2=ffffffff a3=50 items=0 ppid=1 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 exe="/init" subj=u:r:init:s0 key=(null)
+01-04 11:07:19.449   236   236 W auditd  : type=1320 audit(0.0:20): 
+01-04 11:07:19.639   179   179 I e2fsck  : type=1400 audit(0.0:21): avc: denied { read } for name="online" dev="sysfs" ino=34 scontext=u:r:fsck:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:19.639   179   179 I e2fsck  : type=1400 audit(0.0:21): avc: denied { open } for name="online" dev="sysfs" ino=34 scontext=u:r:fsck:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:19.639   179   179 W e2fsck  : type=1300 audit(0.0:21): arch=40000028 syscall=322 per=800008 success=yes exit=3 a0=ffffff9c a1=abfa03d9 a2=a0000 a3=0 items=1 ppid=178 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 exe="/system/bin/e2fsck" subj=u:r:fsck:s0 key=(null)
+01-04 11:07:19.639   236   236 W auditd  : type=1307 audit(0.0:21): cwd="/"
+01-04 11:07:19.639   236   236 W auditd  : type=1302 audit(0.0:21): item=0 name="/sys/devices/system/cpu/online" inode=34 dev=00:0e mode=0100444 ouid=0 ogid=0 rdev=00:00 obj=u:object_r:sysfs:s0
+01-04 11:07:19.639   236   236 W auditd  : type=1320 audit(0.0:21): 
+01-04 11:07:19.639   179   179 I e2fsck  : type=1400 audit(0.0:22): avc: denied { getattr } for path="/sys/devices/system/cpu/online" dev="sysfs" ino=34 scontext=u:r:fsck:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:19.639   179   179 W e2fsck  : type=1300 audit(0.0:22): arch=40000028 syscall=197 per=800008 success=yes exit=0 a0=3 a1=bef9e4d0 a2=0 a3=abd8300c items=0 ppid=178 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 exe="/system/bin/e2fsck" subj=u:r:fsck:s0 key=(null)
+01-04 11:07:19.639   236   236 W auditd  : type=1320 audit(0.0:22): 
+01-04 11:07:19.639   179   179 I e2fsck  : type=1400 audit(0.0:23): avc: denied { read } for name="mmcblk0p23" dev="tmpfs" ino=5248 scontext=u:r:fsck:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+01-04 11:07:19.639   179   179 I e2fsck  : type=1400 audit(0.0:23): avc: denied { open } for name="mmcblk0p23" dev="tmpfs" ino=5248 scontext=u:r:fsck:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+01-04 11:07:19.639   179   179 W e2fsck  : type=1300 audit(0.0:23): arch=40000028 syscall=322 per=800008 success=no exit=-16 a0=ffffff9c a1=abd92000 a2=20080 a3=0 items=1 ppid=178 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 exe="/system/bin/e2fsck" subj=u:r:fsck:s0 key=(null)
+01-04 11:07:19.639   236   236 W auditd  : type=1307 audit(0.0:23): cwd="/"
+01-04 11:07:19.639   236   236 W auditd  : type=1302 audit(0.0:23): item=0 name="/dev/block/platform/msm_sdcc.1/by-name/system" inode=5248 dev=00:0d mode=060600 ouid=0 ogid=0 rdev=b3:17 obj=u:object_r:system_block_device:s0
+01-04 11:07:19.639   236   236 W auditd  : type=1320 audit(0.0:23): 
+01-04 11:07:19.639   179   179 I e2fsck  : type=1400 audit(0.0:24): avc: denied { write } for name="mmcblk0p23" dev="tmpfs" ino=5248 scontext=u:r:fsck:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+01-04 11:07:19.639   179   179 W e2fsck  : type=1300 audit(0.0:24): arch=40000028 syscall=322 per=800008 success=yes exit=4 a0=ffffff9c a1=abd92030 a2=20002 a3=0 items=1 ppid=178 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 exe="/system/bin/e2fsck" subj=u:r:fsck:s0 key=(null)
+01-04 11:07:19.639   236   236 W auditd  : type=1307 audit(0.0:24): cwd="/"
+01-04 11:07:19.639   236   236 W auditd  : type=1302 audit(0.0:24): item=0 name="/dev/block/platform/msm_sdcc.1/by-name/system" inode=5248 dev=00:0d mode=060600 ouid=0 ogid=0 rdev=b3:17 obj=u:object_r:system_block_device:s0
+01-04 11:07:19.639   236   236 W auditd  : type=1320 audit(0.0:24): 
+01-04 11:07:19.639   179   179 I e2fsck  : type=1400 audit(0.0:25): avc: denied { ioctl } for path="/dev/block/mmcblk0p23" dev="tmpfs" ino=5248 ioctlcmd=127c scontext=u:r:fsck:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+01-04 11:07:19.639   179   179 W e2fsck  : type=1300 audit(0.0:25): arch=40000028 syscall=54 per=800008 success=yes exit=0 a0=4 a1=127c a2=bef9f5c0 a3=bef9f544 items=0 ppid=178 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 exe="/system/bin/e2fsck" subj=u:r:fsck:s0 key=(null)
+01-04 11:07:19.639   236   236 W auditd  : type=1320 audit(0.0:25): 
+01-04 11:07:46.370   197   197 I ueventd : type=1400 audit(0.0:26): avc: denied { search } for name="/" dev="mmcblk0p2" ino=1 scontext=u:r:ueventd:s0 tcontext=u:object_r:vfat:s0 tclass=dir permissive=1
+01-04 11:07:46.370   197   197 I ueventd : type=1400 audit(0.0:26): avc: denied { read } for name="adsp.mdt" dev="mmcblk0p2" ino=3 scontext=u:r:ueventd:s0 tcontext=u:object_r:vfat:s0 tclass=file permissive=1
+01-04 11:07:46.370   197   197 I ueventd : type=1400 audit(0.0:26): avc: denied { open } for name="adsp.mdt" dev="mmcblk0p2" ino=3 scontext=u:r:ueventd:s0 tcontext=u:object_r:vfat:s0 tclass=file permissive=1
+01-04 11:07:46.370   197   197 W ueventd : type=1300 audit(0.0:26): arch=40000028 syscall=322 per=800008 success=yes exit=7 a0=ffffff9c a1=b6e1a020 a2=a0000 a3=0 items=1 ppid=169 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 exe="/init" subj=u:r:ueventd:s0 key=(null)
+01-04 11:07:46.370   236   236 W auditd  : type=1307 audit(0.0:26): cwd="/"
+01-04 11:07:46.370   236   236 W auditd  : type=1302 audit(0.0:26): item=0 name="/etc/firmware/adsp.mdt" inode=3 dev=b3:02 mode=0100440 ouid=1000 ogid=1026 rdev=00:00 obj=u:object_r:vfat:s0
+01-04 11:07:46.370   236   236 W auditd  : type=1320 audit(0.0:26): 
+01-04 11:07:46.370   197   197 I ueventd : type=1400 audit(0.0:27): avc: denied { getattr } for path="/firmware-modem/image/adsp.mdt" dev="mmcblk0p2" ino=3 scontext=u:r:ueventd:s0 tcontext=u:object_r:vfat:s0 tclass=file permissive=1
+01-04 11:07:46.370   197   197 W ueventd : type=1300 audit(0.0:27): arch=40000028 syscall=197 per=800008 success=yes exit=0 a0=7 a1=bec54be8 a2=a0000 a3=0 items=0 ppid=169 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 exe="/init" subj=u:r:ueventd:s0 key=(null)
+01-04 11:07:46.370   236   236 W auditd  : type=1320 audit(0.0:27): 
+01-04 11:07:46.859     1     1 I init    : type=1400 audit(0.0:28): avc: denied { write } for name="wcnss_wlan" dev="tmpfs" ino=7205 scontext=u:r:init:s0 tcontext=u:object_r:wcnss_device:s0 tclass=chr_file permissive=1
+01-04 11:07:46.859     1     1 W init    : type=1400 audit(0.0:29): avc: granted { open } for name="wcnss_wlan" dev="tmpfs" ino=7205 scontext=u:r:init:s0 tcontext=u:object_r:wcnss_device:s0 tclass=chr_file
+01-04 11:07:48.029   224   224 I init    : type=1400 audit(0.0:30): avc: denied { execute_no_trans } for path="/system/bin/sh" dev="mmcblk0p23" ino=2879 scontext=u:r:init:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+01-04 11:07:48.029   224   224 W sh      : type=1300 audit(0.0:30): arch=40000028 syscall=11 per=800000 success=yes exit=0 a0=b6db3b60 a1=b5d43a50 a2=b6e9daa0 a3=143 items=2 ppid=1 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 exe="/system/bin/sh" subj=u:r:init:s0 key=(null)
+01-04 11:07:48.029   236   236 W auditd  : type=1309 audit(0.0:30): argc=2 a0="/system/bin/sh" a1="/debug_log.sh"
+01-04 11:07:48.029   236   236 W auditd  : type=1307 audit(0.0:30): cwd="/"
+01-04 11:07:48.029   236   236 W auditd  : type=1302 audit(0.0:30): item=0 name="/system/bin/sh" inode=2879 dev=b3:17 mode=0100755 ouid=0 ogid=2000 rdev=00:00 obj=u:object_r:shell_exec:s0
+01-04 11:07:48.029   236   236 W auditd  : type=1302 audit(0.0:30): item=1 name=(null) inode=2622 dev=b3:17 mode=0100755 ouid=0 ogid=2000 rdev=00:00 obj=u:object_r:system_file:s0
+01-04 11:07:48.029   236   236 W auditd  : type=1320 audit(0.0:30): 
+01-04 11:07:48.149   236   236 W auditd  : type=1305 audit(0.0:44): audit_rate_limit=5 old=0 auid=4294967295 ses=4294967295 subj=u:r:logd:s0 res=1
+01-04 11:07:48.149   231   231 I servicemanager: type=1400 audit(0.0:45): avc: denied { read } for name="online" dev="sysfs" ino=34 scontext=u:r:servicemanager:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:48.149   231   231 I servicemanager: type=1400 audit(0.0:45): avc: denied { open } for name="online" dev="sysfs" ino=34 scontext=u:r:servicemanager:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:48.149   231   231 W servicemanager: type=1300 audit(0.0:45): arch=40000028 syscall=322 per=800008 success=yes exit=3 a0=ffffff9c a1=ab4583d9 a2=a0000 a3=0 items=1 ppid=1 auid=4294967295 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4294967295 exe="/system/bin/servicemanager" subj=u:r:servicemanager:s0 key=(null)
+01-04 11:07:48.149   236   236 W auditd  : type=1307 audit(0.0:45): cwd="/"
+01-04 11:07:48.149   236   236 W auditd  : type=1302 audit(0.0:45): item=0 name="/sys/devices/system/cpu/online" inode=34 dev=00:0e mode=0100444 ouid=0 ogid=0 rdev=00:00 obj=u:object_r:sysfs:s0
+01-04 11:07:48.149   236   236 W auditd  : type=1320 audit(0.0:45): 
+01-04 11:07:48.149   231   231 I servicemanager: type=1400 audit(0.0:46): avc: denied { getattr } for path="/sys/devices/system/cpu/online" dev="sysfs" ino=34 scontext=u:r:servicemanager:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:48.149   231   231 W servicemanager: type=1300 audit(0.0:46): arch=40000028 syscall=197 per=800008 success=yes exit=0 a0=3 a1=bef1f538 a2=0 a3=ab18300c items=0 ppid=1 auid=4294967295 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4294967295 exe="/system/bin/servicemanager" subj=u:r:servicemanager:s0 key=(null)
+01-04 11:07:48.149   236   236 W auditd  : type=1320 audit(0.0:46): 
+01-04 11:07:48.204   236   236 W auditd  : type=2 
+01-04 11:07:48.232   238   238 I SELinux : SELinux: Loaded service_contexts from:
+01-04 11:07:48.234   238   238 I SELinux :     /vndservice_contexts
+01-04 11:07:48.258   237   237 I hwservicemanager: hwservicemanager is ready now.
+01-04 11:07:48.416   240   240 D vndksupport: Loading /vendor/lib/hw/android.hardware.keymaster@3.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:48.436   240   240 I android.hardware.keymaster@3.0-impl: Fetching keymaster device name default
+01-04 11:07:48.437   240   240 I android.hardware.keymaster@3.0-impl: Could not find any keystore module, using software-only implementation.
+01-04 11:07:48.439   240   240 I ServiceManagement: Removing namespace from process name android.hardware.keymaster@3.0-service to keymaster@3.0-service.
+01-04 11:07:48.440   240   240 I android.hardware.keymaster@3.0-service: Registration complete for android.hardware.keymaster@3.0::IKeymasterDevice/default.
+--------- beginning of system
+01-04 11:07:48.485   241   241 I vold    : Vold 3.0 (the awakening) firing up
+01-04 11:07:48.486   241   241 V vold    : Detected support for: exfat ext4 f2fs ntfs vfat
+01-04 11:07:48.499   241   241 W vold    : Failed to LOOP_GET_STATUS64 /dev/block/loop6: No such device or address
+01-04 11:07:48.499   241   241 W vold    : Failed to LOOP_GET_STATUS64 /dev/block/loop2: No such device or address
+01-04 11:07:48.499   241   241 W vold    : Failed to LOOP_GET_STATUS64 /dev/block/loop4: No such device or address
+01-04 11:07:48.499   241   241 W vold    : Failed to LOOP_GET_STATUS64 /dev/block/loop0: No such device or address
+01-04 11:07:48.499   241   241 W vold    : Failed to LOOP_GET_STATUS64 /dev/block/loop5: No such device or address
+01-04 11:07:48.499   241   241 W vold    : Failed to LOOP_GET_STATUS64 /dev/block/loop1: No such device or address
+01-04 11:07:48.499   241   241 W vold    : Failed to LOOP_GET_STATUS64 /dev/block/loop7: No such device or address
+01-04 11:07:48.499   241   241 W vold    : Failed to LOOP_GET_STATUS64 /dev/block/loop3: No such device or address
+01-04 11:07:48.504   241   241 D vold    : VoldNativeService::start() completed OK
+01-04 11:07:48.527   241   243 D vold    : e4crypt_init_user0
+01-04 11:07:48.527   241   243 D vold    : e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+01-04 11:07:48.527   241   243 D vold    : Preparing: /data/system/users/0
+01-04 11:07:48.528   241   243 D vold    : Preparing: /data/misc/profiles/cur/0
+01-04 11:07:48.529   241   243 D vold    : Preparing: /data/system_de/0
+01-04 11:07:48.529   241   243 D vold    : Preparing: /data/misc_de/0
+01-04 11:07:48.529   241   243 D vold    : Preparing: /data/vendor_de/0
+01-04 11:07:48.530   241   243 D vold    : Preparing: /data/user_de/0
+01-04 11:07:48.530   241   243 V vold    : /system/bin/vold_prepare_subdirs
+01-04 11:07:48.530   241   243 V vold    :     prepare
+01-04 11:07:48.530   241   243 V vold    :     
+01-04 11:07:48.530   241   243 V vold    :     0
+01-04 11:07:48.530   241   243 V vold    :     1
+01-04 11:07:48.566   241   243 I vold_prepare_subdirs: SELinux: Loaded file_contexts
+01-04 11:07:48.577   246   246 D vold_prepare_subdirs: Setting up mode 700 uid 0 gid 0 context u:object_r:vold_data_file:s0 on path: /data/misc_de/0/vold
+01-04 11:07:48.579   246   246 D vold_prepare_subdirs: Setting up mode 700 uid 0 gid 0 context u:object_r:storaged_data_file:s0 on path: /data/misc_de/0/storaged
+01-04 11:07:48.580   246   246 D vold_prepare_subdirs: Setting up mode 700 uid 1000 gid 1000 context u:object_r:fingerprint_vendor_data_file:s0 on path: /data/vendor_de/0/fpdata
+01-04 11:07:48.582   241   243 D vold    : e4crypt_unlock_user_key 0 serial=0 token_present=0
+01-04 11:07:48.594   241   245 I vold    : Found disk at /devices/msm_sdcc.2/mmc_host/mmc1/mmc1:0001/block/mmcblk1 but delaying scan due to secure keyguard
+01-04 11:07:50.809   248   248 I tzdatacheck: type=1400 audit(0.0:60): avc: denied { read } for name="online" dev="sysfs" ino=34 scontext=u:r:tzdatacheck:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:50.809   248   248 I tzdatacheck: type=1400 audit(0.0:60): avc: denied { open } for name="online" dev="sysfs" ino=34 scontext=u:r:tzdatacheck:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:50.809   248   248 W tzdatacheck: type=1300 audit(0.0:60): arch=40000028 syscall=322 per=800008 success=yes exit=3 a0=ffffff9c a1=b0de43d9 a2=a0000 a3=0 items=1 ppid=1 auid=4294967295 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4294967295 exe="/system/bin/tzdatacheck" subj=u:r:tzdatacheck:s0 key=(null)
+01-04 11:07:50.809   236   236 W auditd  : type=1307 audit(0.0:60): cwd="/"
+01-04 11:07:50.809   236   236 W auditd  : type=1302 audit(0.0:60): item=0 name="/sys/devices/system/cpu/online" inode=34 dev=00:0e mode=0100444 ouid=0 ogid=0 rdev=00:00 obj=u:object_r:sysfs:s0
+01-04 11:07:50.828   248   248 I /system/bin/tzdatacheck: timezone distro dir /data/misc/zoneinfo/current does not exist. No action required.
+01-04 11:07:50.906   250   250 I sysinit : Running /system/etc/init.d/00banner
+01-04 11:07:50.940   253   253 I lineage : _ _                                       
+01-04 11:07:50.961   254   254 I lineage : | (_)_ __   ___  __ _  __ _  ___  ___  ___ 
+01-04 11:07:50.982   255   255 I lineage : | | | '_ \ / _ \/ _` |/ _` |/ _ \/ _ \/ __|
+01-04 11:07:51.003   257   257 I lineage : | | | | | |  __/ (_| | (_| |  __/ (_) \__ \
+01-04 11:07:51.006   256   256 I ServiceManagement: Removing namespace from process name android.hidl.allocator@1.0-service to allocator@1.0-service.
+01-04 11:07:51.024   258   258 I lineage : |_|_|_| |_|\___|\__,_|\__, |\___|\___/|___/
+01-04 11:07:51.045   259   259 I lineage :                       |___/
+01-04 11:07:51.067   260   260 I health@2.0/: health@2.0/backup: Hal starting main loop...
+01-04 11:07:51.067   260   260 I health@2.0/: health@2.0/backup Hal is starting up...
+01-04 11:07:51.070   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.health@1.0::IHealth/default in either framework or device manifest.
+01-04 11:07:51.075   260   260 I health@2.0/: health@2.0/backup: Hal init done
+01-04 11:07:51.104   265   265 I lineage : Welcome to Android 9 / LineageOS-16.0-20190710-UNOFFICIAL-s3ve3g
+01-04 11:07:51.126   266   266 I sysinit : Running /system/etc/init.d/90userinit
+01-04 11:07:51.167   267   267 D vndksupport: Loading /vendor/lib/hw/android.hardware.bluetooth@1.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:51.186   267   267 I ServiceManagement: Removing namespace from process name android.hardware.bluetooth@1.0-service to bluetooth@1.0-service.
+01-04 11:07:51.187   267   267 I android.hardware.bluetooth@1.0-service: Registration complete for android.hardware.bluetooth@1.0::IBluetoothHci/default.
+01-04 11:07:51.220   271   271 W /vendor/bin/hw/android.hardware.configstore@1.1-service: Could not find seccomp policy file at: /vendor/etc/seccomp_policy/configstore@1.1.policy
+01-04 11:07:51.220   271   271 I ServiceManagement: Removing namespace from process name android.hardware.configstore@1.1-service to configstore@1.1-service.
+01-04 11:07:51.224   272   272 D android.hardware.drm@1.0-service: android.hardware.drm@1.0-service starting...
+01-04 11:07:51.228   272   272 D vndksupport: Loading /vendor/lib/hw/android.hardware.drm@1.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:51.234   269   269 D android.hardware.cas@1.0-service: android.hardware.cas@1.0-service starting...
+01-04 11:07:51.235   269   269 I ServiceManagement: Removing namespace from process name android.hardware.cas@1.0-service to cas@1.0-service.
+01-04 11:07:51.254   272   272 E android.hardware.drm@1.0-impl: Failed to lookup symbol createDrmFactory in library /vendor/lib/mediadrm/libwvdrmengine.so: dlopen failed: cannot locate symbol "RSA_verify_PKCS1_PSS" referenced by "/system/vendor/lib/mediadrm/libwvdrmengine.so"...
+01-04 11:07:51.260   272   272 I ServiceManagement: Removing namespace from process name android.hardware.drm@1.0-service to drm@1.0-service.
+01-04 11:07:51.262   272   272 I android.hardware.drm@1.0-service: Registration complete for android.hardware.drm@1.0::IDrmFactory/default.
+01-04 11:07:51.264   273   273 D vndksupport: Loading /vendor/lib/hw/android.hardware.graphics.allocator@2.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:51.264   272   272 D vndksupport: Loading /vendor/lib/hw/android.hardware.drm@1.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:51.267   273   273 D vndksupport: Loading /vendor/lib/hw/gralloc.msm8226.so from current namespace instead of sphal namespace.
+01-04 11:07:51.267   272   272 E android.hardware.drm@1.0-impl: Failed to lookup symbol createCryptoFactory in library /vendor/lib/mediadrm/libwvdrmengine.so: dlopen failed: cannot locate symbol "RSA_verify_PKCS1_PSS" referenced by "/system/vendor/lib/mediadrm/libwvdrmengine.so"...
+01-04 11:07:51.269   272   272 I ServiceManagement: Removing namespace from process name android.hardware.drm@1.0-service to drm@1.0-service.
+01-04 11:07:51.271   272   272 I android.hardware.drm@1.0-service: Registration complete for android.hardware.drm@1.0::ICryptoFactory/default.
+01-04 11:07:51.276   263   263 I chatty  : uid=1041(audioserver) /vendor/bin/hw/android.hardware.audio@2.0-service expire 13 lines
+01-04 11:07:51.279   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.audio@4.0::IDevicesFactory/default in either framework or device manifest.
+01-04 11:07:51.295   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.audio.effect@4.0::IEffectsFactory/default in either framework or device manifest.
+01-04 11:07:51.306   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.light@2.0::ILight/default in either framework or device manifest.
+01-04 11:07:51.307   274   274 D vndksupport: Loading /vendor/lib/hw/android.hardware.light@2.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:51.310   274   274 D vndksupport: Loading /vendor/lib/hw/lights.MSM8226.so from current namespace instead of sphal namespace.
+01-04 11:07:51.311   274   274 D vndksupport: Loading /vendor/lib/hw/lights.MSM8226.so from current namespace instead of sphal namespace.
+01-04 11:07:51.312   274   274 E light   : light_open lights keyboard failed: -22
+01-04 11:07:51.312   274   274 E light   : Light passthrough failed to load legacy HAL.
+01-04 11:07:51.312   274   274 D vndksupport: Loading /vendor/lib/hw/lights.MSM8226.so from current namespace instead of sphal namespace.
+01-04 11:07:51.312   274   274 E light   : light_open lights buttons failed: -22
+01-04 11:07:51.312   274   274 E light   : Light passthrough failed to load legacy HAL.
+01-04 11:07:51.312   274   274 D vndksupport: Loading /vendor/lib/hw/lights.MSM8226.so from current namespace instead of sphal namespace.
+01-04 11:07:51.313   274   274 I chatty  : uid=1000(system) /vendor/bin/hw/android.hardware.light@2.0-service identical 2 lines
+01-04 11:07:51.314   274   274 D vndksupport: Loading /vendor/lib/hw/lights.MSM8226.so from current namespace instead of sphal namespace.
+01-04 11:07:51.314   274   274 E light   : light_open lights bluetooth failed: -22
+01-04 11:07:51.314   274   274 E light   : Light passthrough failed to load legacy HAL.
+01-04 11:07:51.314   274   274 D vndksupport: Loading /vendor/lib/hw/lights.MSM8226.so from current namespace instead of sphal namespace.
+01-04 11:07:51.315   274   274 E light   : light_open lights wifi failed: -22
+01-04 11:07:51.315   274   274 E light   : Light passthrough failed to load legacy HAL.
+01-04 11:07:51.315   274   274 I ServiceManagement: Removing namespace from process name android.hardware.light@2.0-service to light@2.0-service.
+01-04 11:07:51.318   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.soundtrigger@2.1::ISoundTriggerHw/default in either framework or device manifest.
+01-04 11:07:51.318   274   274 I android.hardware.light@2.0-service: Registration complete for android.hardware.light@2.0::ILight/default.
+01-04 11:07:51.320   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.soundtrigger@2.0::ISoundTriggerHw/default in either framework or device manifest.
+01-04 11:07:51.322   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.bluetooth.a2dp@1.0::IBluetoothAudioOffload/default in either framework or device manifest.
+01-04 11:07:51.329   273   273 I ServiceManagement: Removing namespace from process name android.hardware.graphics.allocator@2.0-service to allocator@2.0-service.
+01-04 11:07:51.330   273   273 I android.hardware.graphics.allocator@2.0-service: Registration complete for android.hardware.graphics.allocator@2.0::IAllocator/default.
+01-04 11:07:51.349   277   277 D vndksupport: Loading /vendor/lib/hw/android.hardware.memtrack@1.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:51.352   277   277 D vndksupport: Loading /vendor/lib/hw/memtrack.msm8226.so from current namespace instead of sphal namespace.
+01-04 11:07:51.352   277   277 D         : memtrack_open: enter; name=memtrack
+01-04 11:07:51.352   277   277 D         : memtrack_open: exit 0
+01-04 11:07:51.353   277   277 I ServiceManagement: Removing namespace from process name android.hardware.memtrack@1.0-service to memtrack@1.0-service.
+01-04 11:07:51.355   277   277 I android.hardware.memtrack@1.0-service: Registration complete for android.hardware.memtrack@1.0::IMemtrack/default.
+01-04 11:07:51.497   278   278 E QCOM PowerHAL: Unable to get perf_hint function handle.
+01-04 11:07:51.498   278   278 I android.hardware.power@1.1-service-qti: Power HAL Service 1.1 for QCOM is starting.
+01-04 11:07:51.498   278   278 I QCOM PowerHAL: QCOM power HAL initing.
+01-04 11:07:51.499   278   278 I ServiceManagement: Removing namespace from process name android.hardware.power@1.1-service-qti to power@1.1-service-qti.
+01-04 11:07:51.502   278   278 I android.hardware.power@1.1-service-qti: Successfully registered IPower
+01-04 11:07:51.503   278   278 I android.hardware.power@1.1-service-qti: Successfully registered ILineagePower
+01-04 11:07:51.503   278   278 I android.hardware.power@1.1-service-qti: Power Service is ready
+01-04 11:07:51.548   237   237 E SELinux : avc:  denied  { find } for interface=android.hardware.sensors::ISensors sid=u:r:init:s0 pid=279 scontext=u:r:init:s0 tcontext=u:object_r:hal_sensors_hwservice:s0 tclass=hwservice_manager permissive=1
+01-04 11:07:51.550   279   279 D vndksupport: Loading /vendor/lib/hw/android.hardware.sensors@1.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:51.553   279   279 D vndksupport: Loading /vendor/lib/hw/sensors.msm8226.so from current namespace instead of sphal namespace.
+01-04 11:07:51.561   279   279 I MultiHal: Loaded library from sensors.vendor.msm8226.so
+01-04 11:07:51.571   280   280 I ServiceManagement: Removing namespace from process name android.hardware.usb@1.0-service.basic to usb@1.0-service.basic.
+01-04 11:07:51.574   280   280 I /vendor/bin/hw/android.hardware.usb@1.0-service.basic: USB HAL Ready.
+01-04 11:07:51.601   279   279 E Sensors : Magneitc enable: mEnabled 0, handle 0, en 1
+01-04 11:07:51.629   279   283 I Sensors : Proximity - 8(cm)
+01-04 11:07:51.630   279   279 I ServiceManagement: Removing namespace from process name android.hardware.sensors@1.0-service.s3ve3g to sensors@1.0-service.s3ve3g.
+01-04 11:07:51.632   237   237 E SELinux : avc:  denied  { add } for interface=android.hardware.sensors::ISensors sid=u:r:init:s0 pid=279 scontext=u:r:init:s0 tcontext=u:object_r:hal_sensors_hwservice:s0 tclass=hwservice_manager permissive=1
+01-04 11:07:51.632   237   237 E SELinux : avc:  denied  { add } for interface=android.hidl.base::IBase sid=u:r:init:s0 pid=279 scontext=u:r:init:s0 tcontext=u:object_r:hidl_base_hwservice:s0 tclass=hwservice_manager permissive=1
+01-04 11:07:51.632   279   279 I android.hardware.sensors@1.0-service.wt88047: Registration complete for android.hardware.sensors@1.0::ISensors/default.
+01-04 11:07:51.652   282   282 D QSEECOMD: : qseecom listener services process entry PPID = 1
+01-04 11:07:51.652   282   282 E QSEECOMD: : Listener: index = 0, hierarchy = 0
+01-04 11:07:51.653   282   282 D QSEECOMD: : Init dlopen(librpmb.so, RTLD_NOW) succeeds
+01-04 11:07:51.653   282   282 D QSEECOMD: : Init::Init dlsym(g_FSHandle rpmb_init_service) succeeds
+01-04 11:07:51.654   282   282 I rpmb    : RPMB Mult = 16384, Rel_sec_cnt = 1
+01-04 11:07:51.654   282   282 E DrmLibRpmb: rpmb_init succeeded! with ret = 0
+01-04 11:07:51.654   282   282 D QSEECOMD: : Init rpmb_init_service ret = 0
+01-04 11:07:51.654   282   282 D QSEECOMD: : RPMB system services: init (Listener ID = 8192)
+01-04 11:07:51.654   282   282 E QSEECOMD: : Listener: index = 1, hierarchy = 0
+01-04 11:07:51.655   282   282 D QSEECOMD: : Init dlopen(libssd.so, RTLD_NOW) succeeds
+01-04 11:07:51.655   282   282 D QSEECOMD: : Init::Init dlsym(g_FSHandle ssd_init_service) succeeds
+01-04 11:07:51.655   282   282 E SSD     : ssd_init_service succeeded!
+01-04 11:07:51.655   282   282 D QSEECOMD: : Init ssd_init_service ret = 0
+01-04 11:07:51.655   282   282 D QSEECOMD: : SSD system services: init (Listener ID = 12288)
+01-04 11:07:51.655   282   282 E QSEECOMD: : Listener: index = 2, hierarchy = 0
+01-04 11:07:51.655   282   282 E QSEECOMD: : Init dlopen(libsecureui.so, RLTD_NOW) is failed....
+01-04 11:07:51.655   282   282 D QSEECOMD: : SEC_UI_INIT failed, shall not start secure ui listener
+01-04 11:07:51.656   282   282 D QSEECOMD: : Parent qseecom daemon process paused!! 
+01-04 11:07:51.656   284   284 D QSEECOMD: : qseecom listener service threads starting!!! 
+01-04 11:07:51.656   284   284 D QSEECOMD: : Total listener services to start = 5
+01-04 11:07:51.656   284   284 E QSEECOMD: : Listener: index = 0, hierarchy = 1
+01-04 11:07:51.656   284   284 D QSEECOMD: : Init dlopen(librpmb.so, RTLD_NOW) succeeds
+01-04 11:07:51.656   284   284 D QSEECOMD: : Init::Init dlsym(g_FSHandle rpmb_start) succeeds
+01-04 11:07:51.656   284   284 D QSEECOMAPI: : QSEECom_register_listener 8192 sb_length = 0x5000
+01-04 11:07:51.687   281   281 I android.hardware.wifi@1.0-service: Wifi Hal is booting up...
+01-04 11:07:51.687   281   281 I ServiceManagement: Removing namespace from process name android.hardware.wifi@1.0-service to wifi@1.0-service.
+01-04 11:07:51.687   284   284 D QSEECOMD: : Init rpmb_start ret = 0
+01-04 11:07:51.687   284   284 D QSEECOMD: : RPMB system services: Started (Listener ID = 8192)
+01-04 11:07:51.688   284   284 E QSEECOMD: : Listener: index = 1, hierarchy = 1
+01-04 11:07:51.688   284   284 D QSEECOMD: : Init dlopen(libssd.so, RTLD_NOW) succeeds
+01-04 11:07:51.688   284   284 D QSEECOMD: : Init::Init dlsym(g_FSHandle ssd_start) succeeds
+01-04 11:07:51.688   284   284 D QSEECOMAPI: : QSEECom_register_listener 12288 sb_length = 0x5000
+01-04 11:07:51.689   284   284 D QSEECOMD: : Init ssd_start ret = 0
+01-04 11:07:51.689   284   284 D QSEECOMD: : SSD system services: Started (Listener ID = 12288)
+01-04 11:07:51.689   284   284 E QSEECOMD: : Listener: index = 3, hierarchy = 1
+01-04 11:07:51.691   284   284 D QSEECOMD: : Init dlopen(libdrmtime.so, RTLD_NOW) succeeds
+01-04 11:07:51.691   284   284 D QSEECOMD: : Init::Init dlsym(g_FSHandle atime_start) succeeds
+01-04 11:07:51.691   284   284 D QSEECOMAPI: : QSEECom_register_listener 11 sb_length = 0x5000
+01-04 11:07:51.692   284   284 D QSEECOMD: : Init atime_start ret = 0
+01-04 11:07:51.692   284   284 D QSEECOMD: : time services: Started (Listener ID = 11)
+01-04 11:07:51.692   284   284 E QSEECOMD: : Listener: index = 4, hierarchy = 1
+01-04 11:07:51.692   284   284 D QSEECOMD: : Init dlopen(libdrmfs.so, RTLD_NOW) succeeds
+01-04 11:07:51.692   284   284 D QSEECOMD: : Init::Init dlsym(g_FSHandle fs_start) succeeds
+01-04 11:07:51.692   284   284 D QSEECOMAPI: : QSEECom_register_listener 10 sb_length = 0x5000
+01-04 11:07:51.693   284   284 D QSEECOMD: : Init fs_start ret = 0
+01-04 11:07:51.693   284   284 D QSEECOMD: : file system services: Started (Listener ID = 10)
+01-04 11:07:51.713   285   285 I rfs_access: Initialized RFS server
+01-04 11:07:51.746   295   295 I lowmemorykiller: Using in-kernel low memory killer interface
+01-04 11:07:51.749   290   290 I ThermalEngine: Thermal daemon started
+01-04 11:07:51.749   290   290 I ThermalEngine: Using config file '/etc/thermal-engine-8226.conf'
+01-04 11:07:51.749   290   290 I ThermalEngine: devices_manager_init: Init
+01-04 11:07:51.750   290   290 I ThermalEngine: Number of gpus :1
+01-04 11:07:51.750   290   290 I Thermal-IOCTL: KTM IOCTL interface "/dev/msm_thermal_query" opened
+01-04 11:07:51.752   290   290 I ThermalEngine: vdd_rstr_init: Init KTM VDD RSTR enabled: 0
+01-04 11:07:51.752   290   290 I ThermalEngine: sensors_manager_init: Init
+01-04 11:07:51.788   290   290 I ThermalEngine: BCL sensors setup done.
+01-04 11:07:51.789   290   290 I ThermalEngine: Loading config file for virtual sensor
+01-04 11:07:51.789   290   290 E ThermalEngine: Unable to open config file '/etc/thermal-engine-8226.conf'
+01-04 11:07:51.789   290   290 E ThermalEngine: virtual_sensors_init: Error getting virtual sensors set
+01-04 11:07:51.789   290   290 E ThermalEngine: Unable to open config file '/etc/thermal-engine-8226.conf'
+01-04 11:07:51.790   290   290 I ThermalEngine: [VDD_RSTR_MONITOR-TSENS5]
+01-04 11:07:51.790   290   290 I ThermalEngine: #algo_type monitor
+01-04 11:07:51.790   290   290 I ThermalEngine: sampling 1000
+01-04 11:07:51.790   290   290 I ThermalEngine: sensor tsens_tz_sensor5
+01-04 11:07:51.790   290   290 I ThermalEngine: thresholds 5000
+01-04 11:07:51.790   290   290 I ThermalEngine: thresholds_clr 10000
+01-04 11:07:51.790   290   290 I ThermalEngine: actions vdd_restriction
+01-04 11:07:51.790   290   290 I ThermalEngine: action_info 1
+01-04 11:07:51.790   290   290 I ThermalEngine: descending
+01-04 11:07:51.790   290   290 I ThermalEngine: [VDD_RSTR_MONITOR-TSENS4]
+01-04 11:07:51.790   290   290 I ThermalEngine: #algo_type monitor
+01-04 11:07:51.790   290   290 I ThermalEngine: sampling 1000
+01-04 11:07:51.790   290   290 I ThermalEngine: sensor tsens_tz_sensor4
+01-04 11:07:51.790   290   290 I ThermalEngine: thresholds 5000
+01-04 11:07:51.790   290   290 I ThermalEngine: thresholds_clr 10000
+01-04 11:07:51.790   290   290 I ThermalEngine: actions vdd_restriction
+01-04 11:07:51.790   290   290 I ThermalEngine: action_info 1
+01-04 11:07:51.790   290   290 I ThermalEngine: descending
+01-04 11:07:51.790   290   290 I ThermalEngine: [VDD_RSTR_MONITOR-TSENS3]
+01-04 11:07:51.790   290   290 I ThermalEngine: #algo_type monitor
+01-04 11:07:51.790   290   290 I ThermalEngine: sampling 1000
+01-04 11:07:51.790   290   290 I ThermalEngine: sensor tsens_tz_sensor3
+01-04 11:07:51.790   290   290 I ThermalEngine: thresholds 5000
+01-04 11:07:51.790   290   290 I ThermalEngine: thresholds_clr 10000
+01-04 11:07:51.790   290   290 I ThermalEngine: actions vdd_restriction
+01-04 11:07:51.790   290   290 I ThermalEngine: action_info 1
+01-04 11:07:51.790   290   290 I ThermalEngine: descending
+01-04 11:07:51.790   290   290 I ThermalEngine: [VDD_RSTR_MONITOR-TSENS2]
+01-04 11:07:51.791   290   290 I ThermalEngine: #algo_type monitor
+01-04 11:07:51.791   290   290 I ThermalEngine: sampling 1000
+01-04 11:07:51.791   290   290 I ThermalEngine: sensor tsens_tz_sensor2
+01-04 11:07:51.791   290   290 I ThermalEngine: thresholds 5000
+01-04 11:07:51.791   290   290 I ThermalEngine: thresholds_clr 10000
+01-04 11:07:51.791   290   290 I ThermalEngine: actions vdd_restriction
+01-04 11:07:51.791   290   290 I ThermalEngine: action_info 1
+01-04 11:07:51.791   290   290 I ThermalEngine: descending
+01-04 11:07:51.791   290   290 I ThermalEngine: [VDD_RSTR_MONITOR-TSENS1]
+01-04 11:07:51.791   290   290 I ThermalEngine: #algo_type monitor
+01-04 11:07:51.791   290   290 I ThermalEngine: sampling 1000
+01-04 11:07:51.791   290   290 I ThermalEngine: sensor tsens_tz_sensor1
+01-04 11:07:51.791   290   290 I ThermalEngine: thresholds 5000
+01-04 11:07:51.791   290   290 I ThermalEngine: thresholds_clr 10000
+01-04 11:07:51.791   290   290 I ThermalEngine: actions vdd_restriction
+01-04 11:07:51.791   290   290 I ThermalEngine: action_info 1
+01-04 11:07:51.791   290   290 I ThermalEngine: descending
+01-04 11:07:51.791   290   290 I ThermalEngine: [VDD_RSTR_MONITOR-TSENS0]
+01-04 11:07:51.791   290   290 I ThermalEngine: #algo_type monitor
+01-04 11:07:51.791   290   290 I ThermalEngine: sampling 1000
+01-04 11:07:51.791   290   290 I ThermalEngine: sensor tsens_tz_sensor0
+01-04 11:07:51.791   290   290 I ThermalEngine: thresholds 5000
+01-04 11:07:51.791   290   290 I ThermalEngine: thresholds_clr 10000
+01-04 11:07:51.791   290   290 I ThermalEngine: actions vdd_restriction
+01-04 11:07:51.791   290   290 I ThermalEngine: action_info 1
+01-04 11:07:51.791   290   290 I ThermalEngine: descending
+01-04 11:07:51.791   290   290 I ThermalEngine: [SS-POPMEM]
+01-04 11:07:51.791   290   290 I ThermalEngine: #algo_type ss
+01-04 11:07:51.791   290   290 I ThermalEngine: sampling 1000
+01-04 11:07:51.791   290   290 I ThermalEngine: sensor pop_mem
+01-04 11:07:51.791   290   290 I ThermalEngine: device cpu
+01-04 11:07:51.791   290   341 I ThermalEngine: Sensor:tsens_tz_sensor5:52000 mC
+01-04 11:07:51.791   290   290 I ThermalEngine: set_point 80000
+01-04 11:07:51.791   290   290 I ThermalEngine: set_point_clr 55000
+01-04 11:07:51.791   290   290 I ThermalEngine: time_constant 2
+01-04 11:07:51.792   290   341 I ThermalEngine: Sensor:tsens_tz_sensor4:47000 mC
+01-04 11:07:51.792   290   290 I ThermalEngine: [SS-CPU2-3]
+01-04 11:07:51.792   290   330 I ThermalEngine: Sensor:tsens_tz_sensor5:52000 mC
+01-04 11:07:51.792   290   290 I ThermalEngine: #algo_type ss
+01-04 11:07:51.792   290   290 I ThermalEngine: sampling 250
+01-04 11:07:51.792   290   290 I ThermalEngine: sensor cpu2-3
+01-04 11:07:51.792   290   290 I ThermalEngine: device cpu
+01-04 11:07:51.792   290   290 I ThermalEngine: set_point 90000
+01-04 11:07:51.792   290   290 I ThermalEngine: set_point_clr 55000
+01-04 11:07:51.792   290   290 I ThermalEngine: time_constant 0
+01-04 11:07:51.795   290   341 I ThermalEngine: Sensor:tsens_tz_sensor3:47000 mC
+01-04 11:07:51.795   290   290 I ThermalEngine: [SS-CPU0-1]
+01-04 11:07:51.795   290   328 I ThermalEngine: Sensor:tsens_tz_sensor4:47000 mC
+01-04 11:07:51.795   290   290 I ThermalEngine: #algo_type ss
+01-04 11:07:51.795   290   290 I ThermalEngine: sampling 250
+01-04 11:07:51.795   290   290 I ThermalEngine: sensor cpu0-1
+01-04 11:07:51.795   290   290 I ThermalEngine: device cpu
+01-04 11:07:51.795   290   290 I ThermalEngine: set_point 90000
+01-04 11:07:51.795   290   290 I ThermalEngine: set_point_clr 55000
+01-04 11:07:51.795   290   290 I ThermalEngine: time_constant 0
+01-04 11:07:51.795   290   341 I ThermalEngine: Sensor:tsens_tz_sensor2:51000 mC
+01-04 11:07:51.796   290   326 I ThermalEngine: Sensor:tsens_tz_sensor3:47000 mC
+01-04 11:07:51.796   290   341 I ThermalEngine: Sensor:tsens_tz_sensor1:46000 mC
+01-04 11:07:51.796   290   324 I ThermalEngine: Sensor:tsens_tz_sensor2:51000 mC
+01-04 11:07:51.796   290   341 I ThermalEngine: Sensor:tsens_tz_sensor0:48000 mC
+01-04 11:07:51.796   290   322 I ThermalEngine: Sensor:tsens_tz_sensor1:46000 mC
+01-04 11:07:51.797   290   320 I ThermalEngine: Sensor:tsens_tz_sensor0:48000 mC
+01-04 11:07:51.797   290   341 I ThermalEngine: vdd_restrict_qmi_request: MODEM req level(0) is recorded and waiting for completing QMI registration
+01-04 11:07:51.797   290   341 I ThermalEngine: vdd_restrict_qmi_request: ADSP req level(0) is recorded and waiting for completing QMI registration
+01-04 11:07:51.797   290   341 I ThermalEngine: hotplug_ktm_disable_cb: write out 0
+01-04 11:07:51.798   290   343 I ThermalEngine: Sensor:tsens_tz_sensor3:47000 mC
+01-04 11:07:51.798   290   343 I ThermalEngine: Sensor:tsens_tz_sensor2:51000 mC
+01-04 11:07:51.799   290   343 I ThermalEngine: Sensor:tsens_tz_sensor5:52000 mC
+01-04 11:07:51.801   284   284 D QSEECOMD: : QSEECOM DAEMON RUNNING 
+01-04 11:07:51.819     1     1 I init    : type=1400 audit(0.0:147): avc: denied { setattr } for name="siop_level" dev="sysfs" ino=19630 scontext=u:r:init:s0 tcontext=u:object_r:sysfs_battery_supply:s0 tclass=file permissive=1
+01-04 11:07:51.849     1     1 I init    : type=1400 audit(0.0:148): avc: denied { read } for name="accelerometer_sensor" dev="sysfs" ino=18408 scontext=u:r:init:s0 tcontext=u:object_r:sysfs_sensors:s0 tclass=lnk_file permissive=1
+01-04 11:07:51.869   336   336 I thermalserviced: type=1400 audit(0.0:149): avc: denied { read } for name="online" dev="sysfs" ino=34 scontext=u:r:thermalserviced:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:51.869   336   336 I thermalserviced: type=1400 audit(0.0:149): avc: denied { open } for name="online" dev="sysfs" ino=34 scontext=u:r:thermalserviced:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:07:51.869   336   336 W thermalserviced: type=1300 audit(0.0:149): arch=40000028 syscall=322 per=800008 success=yes exit=3 a0=ffffff9c a1=a89553d9 a2=a0000 a3=0 items=1 ppid=1 auid=4294967295 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4294967295 exe="/system/bin/thermalserviced" subj=u:r:thermalserviced:s0 key=(null)
+01-04 11:07:51.894   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.thermal@1.1::IThermal/default in either framework or device manifest.
+01-04 11:07:51.897   336   336 W thermalserviced: Unable to get Thermal HAL V1.1, vendor thermal event notification not available
+01-04 11:07:52.079   359   361 I adbd    : initializing functionfs
+01-04 11:07:52.079   359   361 I adbd    : opening control endpoint /dev/usb-ffs/adb/ep0
+01-04 11:07:52.102   313   313 I chatty  : uid=1000(system) /system/bin/surfaceflinger expire 32 lines
+01-04 11:07:52.107   362   362 I rmt_storage: No EBR found
+01-04 11:07:52.107   362   362 I rmt_storage: Error (-1) parsing MBR partitions
+01-04 11:07:52.107   362   362 I rmt_storage: Registering modemst1: 0x4a /boot/modem_fs1
+01-04 11:07:52.107   362   362 I rmt_storage: Registering modemst2: 0x4b /boot/modem_fs2
+01-04 11:07:52.108   362   362 I rmt_storage: Registering fsg: 0x58 /boot/modem_fsg
+01-04 11:07:52.108   362   362 I rmt_storage: Registering ssd: 0x5d ssd
+01-04 11:07:52.108   362   362 I rmt_storage: Registering fsc: 0xff /boot/modem_fsc
+01-04 11:07:52.108   362   362 I rmt_storage: 5 GPT partitions found
+01-04 11:07:52.120   359   361 I adbd    : functionfs successfully initialized
+01-04 11:07:52.120   359   361 I adbd    : registering usb transport
+01-04 11:07:52.341   313   313 I SurfaceFlinger: EGLSurface: 8-8-8-8, config=0x5
+01-04 11:07:52.341   313   313 W Adreno-EGL: <qeglDrvAPI_eglGetConfigAttrib:607>: EGL_BAD_ATTRIBUTE
+01-04 11:07:52.343   313   313 I SurfaceFlinger: OpenGL ES informations:
+01-04 11:07:52.343   313   313 I SurfaceFlinger: vendor    : Qualcomm
+01-04 11:07:52.343   313   313 I SurfaceFlinger: renderer  : Adreno (TM) 305
+01-04 11:07:52.343   313   313 I SurfaceFlinger: version   : OpenGL ES 3.0 V@136.0 AU@ (GIT@I3193f6e94a)
+01-04 11:07:52.343   313   313 I SurfaceFlinger: extensions: GL_AMD_compressed_ATC_texture GL_AMD_performance_monitor GL_AMD_program_binary_Z400 GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_discard_framebuffer GL_EXT_robustness GL_EXT_texture_format_BGRA8888 GL_EXT_texture_type_2_10_10_10_REV GL_NV_fence GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth_texture GL_OES_depth24 GL_OES_EGL_image GL_OES_EGL_sync GL_OES_EGL_image_external GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_fragment_precision_high GL_OES_get_program_binary GL_OES_packed_depth_stencil GL_OES_depth_texture_cube_map GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_vertex_half_float GL_OES_vertex_type_10_10_10_2 GL_OES_vertex_array_object GL_QCOM_alpha_test GL_QCOM_binning_control GL_QCOM_driver_control GL_QCOM_perfmon_global_mode GL_QCOM_extended_get GL_QCOM_extended_get2 GL_QCOM_tiled_rendering GL_QCOM_writeonly_rendering GL_EXT_sRGB GL_EXT_sRGB_write_con
+01-04 11:07:52.343   313   313 I SurfaceFlinger: GL_MAX_TEXTURE_SIZE = 4096
+01-04 11:07:52.343   313   313 I SurfaceFlinger: GL_MAX_VIEWPORT_DIMS = 4096
+01-04 11:07:52.346   313   313 D vndksupport: Loading /vendor/lib/hw/android.hardware.graphics.composer@2.1-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:52.354   313   313 D vndksupport: Loading /vendor/lib/hw/hwcomposer.msm8226.so from current namespace instead of sphal namespace.
+01-04 11:07:52.399   294   294 I chatty  : uid=1041(audioserver) /system/bin/audioserver expire 36 lines
+01-04 11:07:52.405   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.audio@4.0::IDevicesFactory/default in either framework or device manifest.
+01-04 11:07:52.417   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.audio@2.0::IDevicesFactory/msd in either framework or device manifest.
+01-04 11:07:52.421   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.audio.effect@4.0::IEffectsFactory/default in either framework or device manifest.
+01-04 11:07:52.481   362   362 I rmt_storage: rmt_storage_connect_cb: clnt_h=0x1 conn_h=0xb000c018
+01-04 11:07:52.481   362   362 I rmt_storage: rmt_storage_open_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x1 msg_id=1: Client found
+01-04 11:07:52.481   362   362 I rmt_storage: rmt_storage_open_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x1 msg_id=1: Send response: res=0 err=0
+01-04 11:07:52.481   362   392 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 Worker thread started
+01-04 11:07:52.481   362   392 I rmt_storage: wake lock name: rmt_storage_-1342404240, name creation success: 23
+01-04 11:07:52.482   362   362 I rmt_storage: rmt_storage_connect_cb: clnt_h=0x2 conn_h=0xb000c020
+01-04 11:07:52.482   362   362 I rmt_storage: rmt_storage_open_cb: /boot/modem_fs2: clnt_h=0x2: req_h=0x2 msg_id=1: Client found
+01-04 11:07:52.482   362   362 I rmt_storage: rmt_storage_open_cb: /boot/modem_fs2: clnt_h=0x2: req_h=0x2 msg_id=1: Send response: res=0 err=0
+01-04 11:07:52.482   362   393 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 Worker thread started
+01-04 11:07:52.482   362   393 I rmt_storage: wake lock name: rmt_storage_-1343444624, name creation success: 23
+01-04 11:07:52.482   362   362 I rmt_storage: rmt_storage_connect_cb: clnt_h=0x3 conn_h=0xb000c028
+01-04 11:07:52.483   362   394 I rmt_storage: rmt_storage_client_thread: /boot/modem_fsg: clnt_h=0x3 Worker thread started
+01-04 11:07:52.483   362   362 I rmt_storage: rmt_storage_open_cb: /boot/modem_fsg: clnt_h=0x3: req_h=0x3 msg_id=1: Client found
+01-04 11:07:52.483   362   362 I rmt_storage: rmt_storage_open_cb: /boot/modem_fsg: clnt_h=0x3: req_h=0x3 msg_id=1: Send response: res=0 err=0
+01-04 11:07:52.483   362   394 I rmt_storage: wake lock name: rmt_storage_-1344485008, name creation success: 23
+01-04 11:07:52.484   362   362 I rmt_storage: rmt_storage_connect_cb: clnt_h=0x4 conn_h=0xb000c030
+01-04 11:07:52.484   362   362 I rmt_storage: rmt_storage_open_cb: /boot/modem_fsc: clnt_h=0x4: req_h=0x4 msg_id=1: Client found
+01-04 11:07:52.484   362   362 I rmt_storage: rmt_storage_open_cb: /boot/modem_fsc: clnt_h=0x4: req_h=0x4 msg_id=1: Send response: res=0 err=0
+01-04 11:07:52.484   362   395 I rmt_storage: rmt_storage_client_thread: /boot/modem_fsc: clnt_h=0x4 Worker thread started
+01-04 11:07:52.484   362   395 I rmt_storage: wake lock name: rmt_storage_-1345525392, name creation success: 23
+01-04 11:07:52.484   362   362 I rmt_storage: rmt_storage_alloc_buff_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x5 msg_id=4: Alloc request received: Size: 1572864
+01-04 11:07:52.484   362   362 I rmt_storage: rmt_storage_alloc_buff_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x5 msg_id=4: Send response: res=0 err=0
+01-04 11:07:52.485   362   362 I rmt_storage: rmt_storage_rw_iovec_cb: /boot/modem_fsg: clnt_h=0x3: req_h=0x6 msg_id=3: R/W request received
+01-04 11:07:52.485   362   362 I rmt_storage: Shared mem address set to 0xafa51000
+01-04 11:07:52.485   362   362 I rmt_storage: wakelock acquired: 1, error no: 42
+01-04 11:07:52.485   362   394 I rmt_storage: rmt_storage_client_thread: /boot/modem_fsg: clnt_h=0x3 Unblock worker thread (th_id: -1344485008)
+01-04 11:07:52.486   362   394 I rmt_storage: rmt_storage_client_thread: /boot/modem_fsg: clnt_h=0x3: req_h=0x6 msg_id=3: Bytes read = 512
+01-04 11:07:52.486   362   394 I rmt_storage: rmt_storage_client_thread: /boot/modem_fsg: clnt_h=0x3: req_h=0x6 msg_id=3: Send response: res=0 err=0
+01-04 11:07:52.486   362   394 I rmt_storage: rmt_storage_client_thread: /boot/modem_fsg: clnt_h=0x3 About to block rmt_storage client thread (th_id: -1344485008) wakelock released: 1, error no: 0
+01-04 11:07:52.486   362   394 I rmt_storage: 
+01-04 11:07:52.488   362   362 I rmt_storage: rmt_storage_rw_iovec_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x7 msg_id=3: R/W request received
+01-04 11:07:52.488   362   362 I rmt_storage: Shared mem address set to 0xafa51000
+01-04 11:07:52.488   362   362 I rmt_storage: wakelock acquired: 1, error no: 42
+01-04 11:07:52.488   362   392 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 Unblock worker thread (th_id: -1342404240)
+01-04 11:07:52.488   362   392 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1: req_h=0x7 msg_id=3: Bytes read = 512
+01-04 11:07:52.488   362   392 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1: req_h=0x7 msg_id=3: Send response: res=0 err=0
+01-04 11:07:52.489   362   392 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 About to block rmt_storage client thread (th_id: -1342404240) wakelock released: 1, error no: 0
+01-04 11:07:52.489   362   392 I rmt_storage: 
+01-04 11:07:52.489   362   362 I rmt_storage: rmt_storage_rw_iovec_cb: /boot/modem_fs2: clnt_h=0x2: req_h=0x8 msg_id=3: R/W request received
+01-04 11:07:52.489   362   362 I rmt_storage: Shared mem address set to 0xafa51000
+01-04 11:07:52.489   362   362 I rmt_storage: wakelock acquired: 1, error no: 42
+01-04 11:07:52.489   362   393 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 Unblock worker thread (th_id: -1343444624)
+01-04 11:07:52.490   362   393 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0x8 msg_id=3: Bytes read = 512
+01-04 11:07:52.490   362   393 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0x8 msg_id=3: Send response: res=0 err=0
+01-04 11:07:52.490   362   393 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 About to block rmt_storage client thread (th_id: -1343444624) wakelock released: 1, error no: 0
+01-04 11:07:52.490   362   393 I rmt_storage: 
+01-04 11:07:52.491   362   362 I rmt_storage: rmt_storage_rw_iovec_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x9 msg_id=3: R/W request received
+01-04 11:07:52.491   362   362 I rmt_storage: wakelock acquired: 1, error no: 42
+01-04 11:07:52.491   362   392 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 Unblock worker thread (th_id: -1342404240)
+01-04 11:07:52.506   362   392 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1: req_h=0x9 msg_id=3: Bytes read = 1571840
+01-04 11:07:52.506   362   392 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1: req_h=0x9 msg_id=3: Send response: res=0 err=0
+01-04 11:07:52.506   362   392 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 About to block rmt_storage client thread (th_id: -1342404240) wakelock released: 1, error no: 0
+01-04 11:07:52.506   362   392 I rmt_storage: 
+01-04 11:07:52.567   294   294 E audio_route: Control 'RX6 MIX1 INP1' doesn't exist - skipping
+01-04 11:07:52.567   294   294 E audio_route: Control 'RX5 MIX1 INP2' doesn't exist - skipping
+01-04 11:07:52.567   294   294 E audio_route: Control 'RX5 MIX1 INP1' doesn't exist - skipping
+01-04 11:07:52.567   294   294 E audio_route: Control 'RX3 MIX1 INP2' doesn't exist - skipping
+01-04 11:07:52.567   294   294 E audio_route: Control 'RX2 MIX1 INP2' doesn't exist - skipping
+01-04 11:07:52.567   294   294 E audio_route: Control 'SPK_SRC Mux' doesn't exist - skipping
+01-04 11:07:52.567   294   294 E audio_route: Control 'AIN Gain' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'SLIM TX10 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'SLIM TX9 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'SLIM TX8 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'SLIM TX7 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'SLIM TX6 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'DEC10 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'DEC9 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'DEC8 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'DEC7 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'DEC6 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: Control 'DEC5 MUX' doesn't exist - skipping
+01-04 11:07:52.568   294   294 E audio_route: unknown enum value string BTSCO_RATE_8KHZ for ctl Internal BTSCO SampleRate
+01-04 11:07:52.568   294   294 E audio_route: Control 'INTERNAL_BT_SCO_RX Audio Mixer Multimedia6' doesn't exist - skipping
+01-04 11:07:52.569   294   294 E audio_route: Control 'SLIMBUS_0_RX Port Mixer AUX_PCM_TX' doesn't exist - skipping
+01-04 11:07:52.569   294   294 E audio_route: unknown enum value string BTSCO_RATE_16KHZ for ctl Internal BTSCO SampleRate
+01-04 11:07:52.570   294   294 I chatty  : uid=1041(audioserver) /system/bin/audioserver identical 7 lines
+01-04 11:07:52.571   294   294 E audio_route: unknown enum value string BTSCO_RATE_16KHZ for ctl Internal BTSCO SampleRate
+01-04 11:07:52.571   294   294 E audio_route: Control 'SLIMBUS_0_RX Port Mixer INTERNAL_BT_SCO_TX' doesn't exist - skipping
+01-04 11:07:52.571   294   294 E audio_route: unknown enum value string BTSCO_RATE_16KHZ for ctl Internal BTSCO SampleRate
+01-04 11:07:52.573   294   294 E audio_route: Control 'RX5 MIX1 INP1' doesn't exist - skipping
+01-04 11:07:52.573   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX7' doesn't exist - skipping
+01-04 11:07:52.573   294   294 E audio_route: Control 'SLIM TX7 MUX' doesn't exist - skipping
+01-04 11:07:52.573   294   294 E audio_route: Control 'DEC8 MUX' doesn't exist - skipping
+01-04 11:07:52.573   294   294 E audio_route: Control 'DEC7 MUX' doesn't exist - skipping
+01-04 11:07:52.573   294   294 E audio_route: unknown enum value string DEC8 for ctl IIR1 INP1 MUX
+01-04 11:07:52.574   294   294 E audio_route: Control 'IIR2 INP1 MUX' doesn't exist - skipping
+01-04 11:07:52.574   294   294 E audio_route: Control 'RX2 MIX1 INP2' doesn't exist - skipping
+01-04 11:07:52.574   294   294 E audio_route: Control 'RX7 MIX2 INP1' doesn't exist - skipping
+01-04 11:07:52.574   294   294 E audio_route: Control 'RX7 MIX2 INP2' doesn't exist - skipping
+01-04 11:07:52.574   294   294 E audio_route: Control 'SLIM RX1 MUX' already exists in path 'speaker-and-dock'
+01-04 11:07:52.574   294   294 E audio_route: Control 'RX5 Digital Volume' doesn't exist - skipping
+01-04 11:07:52.575   294   294 E audio_route: Control 'DEC8 Volume' doesn't exist - skipping
+01-04 11:07:52.575   294   294 E audio_route: Control 'DEC7 Volume' doesn't exist - skipping
+01-04 11:07:52.575   294   294 E audio_route: Control 'ADC6 Volume' doesn't exist - skipping
+01-04 11:07:52.575   294   294 E audio_route: Control 'IIR2 INP1 Volume' doesn't exist - skipping
+01-04 11:07:52.575   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'rec-stereo-mic'
+01-04 11:07:52.575   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.576   294   294 E audio_route: Control 'Main Mic Delay' doesn't exist - skipping
+01-04 11:07:52.576   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'rec-high-gain-stereo-mic'
+01-04 11:07:52.576   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.576   294   294 I chatty  : uid=1041(audioserver) /system/bin/audioserver identical 1 line
+01-04 11:07:52.576   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.576   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'bargein1-NS-mic'
+01-04 11:07:52.577   294   294 E audio_route: Control 'TX5 HPF cut off' doesn't exist - skipping
+01-04 11:07:52.577   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.577   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.577   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'bargein2-NS-mic'
+01-04 11:07:52.577   294   294 E audio_route: Control 'TX5 HPF cut off' doesn't exist - skipping
+01-04 11:07:52.577   294   294 E audio_route: unknown enum value string POS_3_DB for ctl EAR PA Gain
+01-04 11:07:52.578   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'voice-call-NS-mic-handset'
+01-04 11:07:52.578   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.578   294   294 E audio_route: Control 'TX5 HPF cut off' doesn't exist - skipping
+01-04 11:07:52.578   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'voice-call-NS-mic-speaker'
+01-04 11:07:52.579   294   294 E audio_route: unknown enum value string POS_3_DB for ctl EAR PA Gain
+01-04 11:07:52.579   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.580   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'video-call-NS-mic-handset'
+01-04 11:07:52.580   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.580   294   294 E audio_route: Control 'TX5 HPF cut off' doesn't exist - skipping
+01-04 11:07:52.580   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'video-call-NS-mic-speaker'
+01-04 11:07:52.580   294   294 E audio_route: unknown enum value string POS_3_DB for ctl EAR PA Gain
+01-04 11:07:52.580   294   294 E audio_route: unknown enum value string POS_3_DB for ctl EAR PA Gain
+01-04 11:07:52.580   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.581   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.581   294   294 E audio_route: Control 'DEC5 Volume' doesn't exist - skipping
+01-04 11:07:52.581   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'VoLTE-voice-NS-mic-handset'
+01-04 11:07:52.581   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.581   294   294 E audio_route: Control 'TX5 HPF cut off' doesn't exist - skipping
+01-04 11:07:52.581   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'VoLTE-voice-NS-mic-speaker'
+01-04 11:07:52.581   294   294 E audio_route: unknown enum value string POS_3_DB for ctl EAR PA Gain
+01-04 11:07:52.581   294   294 E audio_route: unknown enum value string POS_3_DB for ctl EAR PA Gain
+01-04 11:07:52.582   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.582   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.582   294   294 E audio_route: Control 'DEC5 Volume' doesn't exist - skipping
+01-04 11:07:52.582   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'VoLTE-video-NS-mic-handset'
+01-04 11:07:52.582   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.582   294   294 E audio_route: Control 'TX5 HPF cut off' doesn't exist - skipping
+01-04 11:07:52.582   294   294 E audio_route: Control 'AIF1_CAP Mixer SLIM TX1' already exists in path 'VoLTE-video-NS-mic-speaker'
+01-04 11:07:52.583   294   294 E audio_route: unknown enum value string POS_3_DB for ctl EAR PA Gain
+01-04 11:07:52.584   294   294 E audio_route: unknown enum value string POS_3_DB for ctl EAR PA Gain
+01-04 11:07:52.584   294   294 E audio_route: Control 'TX5 HPF cut off' doesn't exist - skipping
+01-04 11:07:52.585   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.585   294   294 E audio_route: Control 'DEC5 Volume' doesn't exist - skipping
+01-04 11:07:52.585   294   294 E audio_route: Control 'TX5 HPF cut off' doesn't exist - skipping
+01-04 11:07:52.585   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.585   294   294 E audio_route: Control 'TX5 HPF cut off' doesn't exist - skipping
+01-04 11:07:52.585   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.585   294   294 E audio_route: Control 'DEC5 Volume' doesn't exist - skipping
+01-04 11:07:52.586   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.587   294   294 E audio_route: unknown enum value string POS_3_DB for ctl EAR PA Gain
+01-04 11:07:52.588   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.589   294   294 E audio_route: Control 'DEC6 Volume' doesn't exist - skipping
+01-04 11:07:52.591   294   294 D msm8974_platform: platform_init: Opened sound card:0
+01-04 11:07:52.606   313   313 E qdutils : Failed to open msm_fb_panel_info node
+01-04 11:07:52.607   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_INITIALIZE_V2
+01-04 11:07:52.608   313   313 E qdutils : getHDMINode: Failed to open fb node 2
+01-04 11:07:52.608   313   313 E qdutils : getHDMINode: Failed to find HDMI node
+01-04 11:07:52.608   313   313 E qdutils : init:not able to open /sys/devices/virtual/graphics/fb0/idle_time node Permission denied
+01-04 11:07:52.610   313   313 I qdhwcomposer: Initializing Qualcomm Hardware Composer
+01-04 11:07:52.610   313   313 I qdhwcomposer: MDP version: 500
+01-04 11:07:52.610   313   313 I HWC2On1Adapter: Found support for HWC virtual displays
+01-04 11:07:52.610   313   313 E qdutils : getHDMINode: Failed to open fb node 2
+01-04 11:07:52.610   313   313 E qdutils : getHDMINode: Failed to find HDMI node
+01-04 11:07:52.610   313   313 E qdutils : getHDMINode: Failed to open fb node 2
+01-04 11:07:52.610   313   313 E qdutils : getHDMINode: Failed to find HDMI node
+01-04 11:07:52.610   313   313 D qdhwcomposer: hwc_getDisplayAttributes disp = 0, width = 720
+01-04 11:07:52.610   313   313 D qdhwcomposer: hwc_getDisplayAttributes disp = 0, height = 1280
+01-04 11:07:52.611   313   313 E qdutils : getHDMINode: Failed to open fb node 2
+01-04 11:07:52.611   313   313 E qdutils : getHDMINode: Failed to find HDMI node
+01-04 11:07:52.611   313   313 E HWC2On1Adapter: Setting active config to 0 for HWC1 config 0
+01-04 11:07:52.611   313   313 I qdhwcomposer: hwc_registerProcs
+01-04 11:07:52.611   313   313 I qdhwcomposer: Initializing UEVENT Thread
+01-04 11:07:52.611   313   313 I qdhwcomposer: Initializing VSYNC Thread
+01-04 11:07:52.612   313   398 I qdhwcomposer: vsync_loop: Reading event 0 for dpy 0 from /sys/class/graphics/fb0/vsync_event
+01-04 11:07:52.612   313   398 I qdhwcomposer: vsync_loop: Reading event 1 for dpy 0 from /sys/class/graphics/fb0/show_blank_event
+01-04 11:07:52.612   313   398 I qdhwcomposer: vsync_loop: Reading event 0 for dpy 1 from /sys/class/graphics/fb-1/vsync_event
+01-04 11:07:52.613   313   398 I qdhwcomposer: vsync_loop: Reading event 1 for dpy 1 from /sys/class/graphics/fb-1/show_blank_event
+01-04 11:07:52.614   313   313 D vndksupport: Loading /vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:52.624   313   313 D vndksupport: Loading /vendor/lib/hw/gralloc.msm8226.so from current namespace instead of sphal namespace.
+01-04 11:07:52.625   294   294 D ACDB-LOADER: ACDB -> ACPH INIT
+01-04 11:07:52.625   294   294 D         : [ACPH]->Online service registered with ACPH
+01-04 11:07:52.627   294   294 D         : [ACPH]->ACPH init success
+01-04 11:07:52.627   294   294 D ACDB-LOADER: ACDB -> RTAC INIT
+01-04 11:07:52.627   294   294 D         : [ACPH]->DSP RTC service registered with ACPH
+01-04 11:07:52.627   294   294 D ACDB-LOADER: ACDB -> ADIE RTAC INIT
+01-04 11:07:52.627   294   294 D         : [ACPH]->ADIE RTC service registered with ACPH
+01-04 11:07:52.627   294   294 D ACDB-LOADER: No existing ION info in ACDB driver
+01-04 11:07:52.627   294   294 D ACDB-LOADER: ACDB -> ION_IOC_ALLOC
+01-04 11:07:52.627   313   313 E HWComposer: getSupportedPerFrameMetadata: getSupportedPerFrameMetadata failed for display 0: Unsupported (8)
+01-04 11:07:52.627   294   294 D ACDB-LOADER: ACDB -> ION_IOC_SHARE
+01-04 11:07:52.627   294   294 D ACDB-LOADER: ACDB -> MMAP ADDR
+01-04 11:07:52.627   294   294 D ACDB-LOADER: ACDB -> register MEM to ACDB driver: 0xb2783000
+01-04 11:07:52.627   313   313 W Adreno-EGL: <qeglDrvAPI_eglGetConfigAttrib:607>: EGL_BAD_ATTRIBUTE
+01-04 11:07:52.628   313   313 D vndksupport: Loading /vendor/lib/hw/gralloc.msm8226.so from current namespace instead of sphal namespace.
+01-04 11:07:52.631   313   313 D vndksupport: Loading /vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:52.631   313   313 D vndksupport: Loading /vendor/lib/hw/gralloc.msm8226.so from current namespace instead of sphal namespace.
+01-04 11:07:52.635   313   313 I Gralloc2: Adding additional valid usage bits: 0x2202000
+01-04 11:07:52.637   294   294 D ACDB-LOADER: ACDB -> send_asm_topology
+01-04 11:07:52.637   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TOPOLOGY_ID
+01-04 11:07:52.637   294   294 D ACDB-LOADER: ACDB -> send_adm_custom_topology
+01-04 11:07:52.637   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDIO_COPP_TOPOLOGIES
+01-04 11:07:52.637   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_ADM_CUSTOM_TOPOLOGY
+01-04 11:07:52.637   294   294 D ACDB-LOADER: ACDB -> send_asm_custom_topology
+01-04 11:07:52.637   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDIO_POPP_TOPOLOGIES
+01-04 11:07:52.637   294   294 D         : ACDBFILE_MGR: Property for the pid 00012E48 not found
+01-04 11:07:52.638   294   294 D         : ACDB_COMMAND: Failed to fetch the property info for pid 00012E48 
+01-04 11:07:52.638   294   294 E ACDB-LOADER: Error: ACDB get asm topologies returned = -18
+01-04 11:07:52.638   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_ASM_CUSTOM_TOPOLOGY
+01-04 11:07:52.638   294   294 D ACDB-LOADER: send mbhc data
+01-04 11:07:52.646   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_ANC_SETTING
+01-04 11:07:52.646   294   294 I chatty  : uid=1041(audioserver) /system/bin/audioserver identical 5 lines
+01-04 11:07:52.646   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_ANC_SETTING
+01-04 11:07:52.646   294   294 D ACDB-LOADER: ACDB -> init done!
+01-04 11:07:52.648   294   294 E msm8974_platform: find_index: Could not find index for name = SND_DEVICE_IN_VOICE_REC_HEADSET_MIC
+01-04 11:07:52.648   294   294 E platform_info: process_device_name: Device SND_DEVICE_IN_VOICE_REC_HEADSET_MIC in /vendor/etc/audio_platform_info.xml not found, no alias set!
+01-04 11:07:52.652   294   294 E audio_hw_primary: Amplifier initialization failed
+01-04 11:07:52.653   294   294 D audio_hw_primary: select_devices: out_snd_device(2: speaker) in_snd_device(0: )
+01-04 11:07:52.653   294   294 W msm8974_platform: Codec backend bitwidth 16, samplerate 48000
+01-04 11:07:52.653   294   294 D hardware_info: hw_info_append_hw_type : device_name = speaker
+01-04 11:07:52.653   294   294 I msm8974_platform: platform_send_audio_calibration: sending audio calibration for snd_device(2) acdb_id(15)
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> send_audio_cal, acdb_id = 15, path =  0
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> send_adm_topology
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TOPOLOGY_ID
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> send_audtable
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_CAL
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> send_audvoltable
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_VOL_CAL
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> send_afe_cal
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE
+01-04 11:07:52.653   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AFE_CAL
+01-04 11:07:52.653   294   294 D audio_route: Apply path: speaker
+01-04 11:07:52.657   294   294 D audio_route: Apply path: deep-buffer-playback
+01-04 11:07:52.657   294   294 D audio_hw_primary: select_devices: done
+01-04 11:07:52.665   294   294 D hardware_info: hw_info_append_hw_type : device_name = speaker
+01-04 11:07:52.668   294   294 D audio_hw_primary: select_devices: out_snd_device(2: speaker) in_snd_device(0: )
+01-04 11:07:52.668   294   294 W msm8974_platform: Codec backend bitwidth 16, samplerate 48000
+01-04 11:07:52.668   294   294 D hardware_info: hw_info_append_hw_type : device_name = speaker
+01-04 11:07:52.668   294   294 I msm8974_platform: platform_send_audio_calibration: sending audio calibration for snd_device(2) acdb_id(15)
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> send_audio_cal, acdb_id = 15, path =  0
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> send_adm_topology
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TOPOLOGY_ID
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> send_audtable
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_CAL
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> send_audvoltable
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_VOL_CAL
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> send_afe_cal
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AFE_COMMON_TABLE
+01-04 11:07:52.668   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AFE_CAL
+01-04 11:07:52.668   294   294 D audio_route: Apply path: speaker
+01-04 11:07:52.671   294   294 D audio_route: Apply path: low-latency-playback
+01-04 11:07:52.671   294   294 D audio_hw_primary: select_devices: done
+01-04 11:07:52.678   294   294 D hardware_info: hw_info_append_hw_type : device_name = speaker
+01-04 11:07:52.681   294   294 D audio_hw_primary: select_devices: out_snd_device(0: ) in_snd_device(35: rec-main-mic)
+01-04 11:07:52.681   294   294 D hardware_info: hw_info_append_hw_type : device_name = rec-main-mic
+01-04 11:07:52.681   294   294 I msm8974_platform: platform_send_audio_calibration: sending audio calibration for snd_device(35) acdb_id(4)
+01-04 11:07:52.681   294   294 D ACDB-LOADER: ACDB -> send_audio_cal, acdb_id = 4, path =  1
+01-04 11:07:52.681   294   294 D ACDB-LOADER: ACDB -> send_adm_topology
+01-04 11:07:52.681   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TOPOLOGY_ID
+01-04 11:07:52.681   294   294 D ACDB-LOADER: ACDB -> send_audtable
+01-04 11:07:52.681   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE
+01-04 11:07:52.681   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_CAL
+01-04 11:07:52.681   294   294 D ACDB-LOADER: ACDB -> send_audvoltable
+01-04 11:07:52.681   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE
+01-04 11:07:52.681   294   294 D         : Failed to fetch the lookup information of the device 00000004 
+01-04 11:07:52.681   294   294 E ACDB-LOADER: Error: ACDB AudProc vol returned = -19
+01-04 11:07:52.681   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_VOL_CAL
+01-04 11:07:52.681   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AFE_CAL
+01-04 11:07:52.681   294   294 D audio_route: Apply path: rec-main-mic
+01-04 11:07:52.685   294   294 D audio_route: Apply path: audio-record
+01-04 11:07:52.686   294   294 D audio_hw_primary: select_devices: done
+01-04 11:07:52.693   294   294 D hardware_info: hw_info_append_hw_type : device_name = rec-main-mic
+01-04 11:07:52.696   294   294 D audio_hw_primary: select_devices: out_snd_device(0: ) in_snd_device(35: rec-main-mic)
+01-04 11:07:52.696   294   294 D hardware_info: hw_info_append_hw_type : device_name = rec-main-mic
+01-04 11:07:52.697   294   294 I msm8974_platform: platform_send_audio_calibration: sending audio calibration for snd_device(35) acdb_id(4)
+01-04 11:07:52.697   294   294 D ACDB-LOADER: ACDB -> send_audio_cal, acdb_id = 4, path =  1
+01-04 11:07:52.697   294   294 D ACDB-LOADER: ACDB -> send_adm_topology
+01-04 11:07:52.697   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TOPOLOGY_ID
+01-04 11:07:52.697   294   294 D ACDB-LOADER: ACDB -> send_audtable
+01-04 11:07:52.697   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_COMMON_TABLE
+01-04 11:07:52.697   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_CAL
+01-04 11:07:52.697   294   294 D ACDB-LOADER: ACDB -> send_audvoltable
+01-04 11:07:52.697   294   294 D ACDB-LOADER: ACDB -> ACDB_CMD_GET_AUDPROC_GAIN_DEP_STEP_TABLE
+01-04 11:07:52.697   294   294 D         : Failed to fetch the lookup information of the device 00000004 
+01-04 11:07:52.697   294   294 E ACDB-LOADER: Error: ACDB AudProc vol returned = -19
+01-04 11:07:52.697   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AUDPROC_VOL_CAL
+01-04 11:07:52.697   294   294 D ACDB-LOADER: ACDB -> AUDIO_SET_AFE_CAL
+01-04 11:07:52.697   294   294 D audio_route: Apply path: rec-main-mic
+01-04 11:07:52.700   294   294 D audio_route: Apply path: low-latency-record
+01-04 11:07:52.701   294   294 D audio_hw_primary: select_devices: done
+01-04 11:07:52.708   294   294 D hardware_info: hw_info_append_hw_type : device_name = rec-main-mic
+01-04 11:07:52.710   294   294 W DeviceHAL: Error from HAL Device in function get_master_volume: Function not implemented
+01-04 11:07:52.710   294   294 W DeviceHAL: Error from HAL Device in function get_master_mute: Function not implemented
+01-04 11:07:52.710   294   294 W DeviceHAL: Error from HAL Device in function set_master_volume: Function not implemented
+01-04 11:07:52.710   294   294 W DeviceHAL: Error from HAL Device in function set_master_mute: Function not implemented
+01-04 11:07:52.710   294   294 I AudioFlinger: loadHwModule() Loaded primary audio interface, handle 10
+01-04 11:07:52.710   294   294 I AudioFlinger: openOutput() this 0xb333c000, module 10 Device 0x2, SamplingRate 48000, Format 0x000001, Channels 0x3, flags 0x2
+01-04 11:07:52.710   294   294 D audio_hw_primary: adev_open_output_stream: enter: sample_rate(48000) channel_mask(0x3) devices(0x2) flags(0x2)        stream_handle(0xb2776000)
+01-04 11:07:52.710   294   294 D audio_hw_primary: adev_open_output_stream: Stream (0xb2776000) picks up usecase (deep-buffer-playback)
+01-04 11:07:52.711   294   294 I AudioFlinger: HAL output buffer size 1920 frames, normal sink buffer size 1920 frames
+01-04 11:07:52.712   237   237 W hwservicemanager: getTransport: Cannot find entry android.hardware.audio.effect@4.0::IEffectsFactory/default in either framework or device manifest.
+01-04 11:07:52.715   294   294 D vndksupport: Loading /vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:52.719   294   294 D vndksupport: Loading /vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:52.720   294   294 E EffectsConfig: Could not parse effect configuration in any of the default locations.
+01-04 11:07:52.720   294   294 E EffectsFactoryConfigLoader: Failed to parse XML configuration file
+01-04 11:07:52.720   294   294 W EffectsFactory: Failed to load XML effect configuration, fallback to .conf
+01-04 11:07:52.732   294   294 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-04 11:07:52.733   294   294 I AudioFlinger: Using module 10 as the primary audio interface
+01-04 11:07:52.733   294   405 I AudioFlinger: AudioFlinger's thread 0xb2483400 tid=405 ready to run
+01-04 11:07:52.733   294   405 W AudioFlinger: no wake lock to update, system not ready yet
+01-04 11:07:52.733   294   405 D audio_hw_primary: out_standby: enter: stream (0xb2776000) usecase(0: deep-buffer-playback)
+01-04 11:07:52.733   294   405 W AudioFlinger: no wake lock to update, system not ready yet
+01-04 11:07:52.734   294   294 W AudioFlinger: moveEffects() bad srcOutput 0
+01-04 11:07:52.734   294   405 D audio_hw_primary: out_set_parameters: enter: usecase(0: deep-buffer-playback) kvpairs: routing=2
+01-04 11:07:52.735   294   294 I AudioFlinger: openOutput() this 0xb333c000, module 10 Device 0x2, SamplingRate 48000, Format 0x000001, Channels 0x3, flags 0x4
+01-04 11:07:52.735   294   294 D audio_hw_primary: adev_open_output_stream: enter: sample_rate(48000) channel_mask(0x3) devices(0x2) flags(0x4)        stream_handle(0xb2776180)
+01-04 11:07:52.735   294   294 D audio_hw_primary: adev_open_output_stream: Stream (0xb2776180) picks up usecase (low-latency-playback)
+01-04 11:07:52.735   294   294 I AudioFlinger: HAL output buffer size 240 frames, normal sink buffer size 960 frames
+01-04 11:07:52.736   294   407 I AudioFlinger: AudioFlinger's thread 0xb2183740 tid=407 ready to run
+01-04 11:07:52.736   294   407 W AudioFlinger: no wake lock to update, system not ready yet
+01-04 11:07:52.736   294   407 D audio_hw_primary: out_standby: enter: stream (0xb2776180) usecase(1: low-latency-playback)
+01-04 11:07:52.736   294   407 W AudioFlinger: no wake lock to update, system not ready yet
+01-04 11:07:52.737   294   407 D audio_hw_primary: out_set_parameters: enter: usecase(1: low-latency-playback) kvpairs: routing=2
+01-04 11:07:52.738   294   294 I AudioFlinger: openOutput() this 0xb333c000, module 10 Device 0x10000, SamplingRate 48000, Format 0x000001, Channels 0x3, flags 0
+01-04 11:07:52.738   294   294 D audio_hw_primary: adev_open_output_stream: enter: sample_rate(48000) channel_mask(0x3) devices(0x10000) flags(0)        stream_handle(0xb2776300)
+01-04 11:07:52.738   294   294 D audio_hw_primary: adev_open_output_stream: Stream (0xb2776300) picks up usecase (afe-proxy-playback)
+01-04 11:07:52.738   294   294 I AudioFlinger: HAL output buffer size 768 frames, normal sink buffer size 1152 frames
+01-04 11:07:52.739   294   409 I AudioFlinger: AudioFlinger's thread 0xb1e83140 tid=409 ready to run
+01-04 11:07:52.739   294   409 W AudioFlinger: no wake lock to update, system not ready yet
+01-04 11:07:52.739   294   409 D audio_hw_primary: out_standby: enter: stream (0xb2776300) usecase(29: afe-proxy-playback)
+01-04 11:07:52.739   294   409 W AudioFlinger: no wake lock to update, system not ready yet
+01-04 11:07:52.740   294   409 D audio_hw_primary: out_set_parameters: enter: usecase(29: afe-proxy-playback) kvpairs: routing=65536
+01-04 11:07:52.740   294   294 D audio_hw_primary: adev_open_input_stream: enter: sample_rate(48000) channel_mask(0x17000c) devices(0x80000004)        stream_handle(0xb3334620) io_handle(14) source(1)
+01-04 11:07:52.740   294   294 W audio_hw_primary: adev_open_input_stream: surround sound recording is not supported
+01-04 11:07:52.741   294   294 E AudioFlinger: not enough memory for pipe buffer size=49152; roHeap=0xb3367b90, pipeMemory=0x0, pipeBuffer=0x0; roHeapSize: 16384
+01-04 11:07:52.741   294   410 I AudioFlinger: AudioFlinger's thread 0xb1b83080 tid=410 ready to run
+01-04 11:07:52.742   294   294 D audio_hw_primary: adev_close_input_stream: enter:stream_handle(0xb3334620)
+01-04 11:07:52.742   294   294 D audio_hw_primary: in_standby: enter: stream (0xb3334620) usecase(9: audio-record)
+01-04 11:07:52.742   294   294 D audio_hw_primary: adev_open_input_stream: enter: sample_rate(48000) channel_mask(0xc) devices(0x80000040)        stream_handle(0xb3334620) io_handle(22) source(1)
+01-04 11:07:52.742   294   294 W DeviceHAL: Error from HAL Device in function open_input_stream: Invalid argument
+01-04 11:07:52.742   294   294 D audio_hw_primary: adev_open_input_stream: enter: sample_rate(48000) channel_mask(0xc) devices(0x80000040)        stream_handle(0xb3334620) io_handle(22) source(1)
+01-04 11:07:52.742   294   294 W DeviceHAL: Error from HAL Device in function open_input_stream: Invalid argument
+01-04 11:07:52.742   294   294 W APM_AudioPolicyManager: Cannot open input stream for device 80000040 on hw module primary
+01-04 11:07:52.762   294   294 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-04 11:07:52.762   294   294 I AudioFlinger: loadHwModule() Loaded a2dp audio interface, handle 18
+01-04 11:07:52.762   294   294 D vndksupport: Loading /vendor/lib/hw/audio.usb.default.so from current namespace instead of sphal namespace.
+01-04 11:07:52.766   294   294 I AudioFlinger: loadHwModule() Loaded usb audio interface, handle 26
+01-04 11:07:52.767   294   294 D vndksupport: Loading /vendor/lib/hw/audio.r_submix.default.so from current namespace instead of sphal namespace.
+01-04 11:07:52.770   294   294 I r_submix: adev_open(name=audio_hw_if)
+01-04 11:07:52.770   294   294 I r_submix: adev_init_check()
+01-04 11:07:52.770   294   294 W DeviceHAL: Error from HAL Device in function set_master_mute: Function not implemented
+01-04 11:07:52.770   294   294 I AudioFlinger: loadHwModule() Loaded r_submix audio interface, handle 34
+01-04 11:07:52.770   294   294 D r_submix: adev_open_input_stream(addr=0)
+01-04 11:07:52.770   294   294 D r_submix: submix_audio_device_create_pipe_l(addr=0, idx=9)
+01-04 11:07:52.770   294   294 D r_submix:   now using address 0 for route 9
+01-04 11:07:52.771   294   411 I AudioFlinger: AudioFlinger's thread 0xb1b83540 tid=411 ready to run
+01-04 11:07:52.772   294   294 D r_submix: adev_close_input_stream()
+01-04 11:07:52.772   294   294 D r_submix: submix_audio_device_release_pipe_l(idx=9) addr=0
+01-04 11:07:52.772   294   294 D r_submix: submix_audio_device_destroy_pipe_l(): pipe destroyed
+01-04 11:07:52.772   294   294 E EffectsConfig: Could not parse effect configuration in any of the default locations.
+01-04 11:07:52.772   294   294 W AudioPolicyEffects: Failed to load XML effect configuration, fallback to .conf
+01-04 11:07:52.773   294   294 I         : Waiting for activity service
+01-04 11:07:52.969   362   362 I rmt_storage: rmt_storage_connect_cb: clnt_h=0x5 conn_h=0xb000c050
+01-04 11:07:52.969   362   362 I rmt_storage: rmt_storage_rw_iovec_cb: /boot/modem_fs2: clnt_h=0x2: req_h=0xa msg_id=3: R/W request received
+01-04 11:07:52.969   362   362 I rmt_storage: wakelock acquired: 1, error no: 42
+01-04 11:07:52.969   362   393 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 Unblock worker thread (th_id: -1343444624)
+01-04 11:07:53.003   313   313 D SurfaceFlinger: shader cache generated - 24 shaders in 343.311249 ms
+01-04 11:07:53.008   313   313 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xb0b36000
+01-04 11:07:53.008   313   313 D qdhwcomposer: hwc_setPowerMode: Setting mode 2 on display: 0
+01-04 11:07:53.008   313   313 D qdhwcomposer: hwc_setPowerMode: Done setting mode 2 on display 0
+01-04 11:07:53.008   313   398 I qdhwcomposer: handle_blank_event: dpy:0 panel power state: 1
+01-04 11:07:53.008   313   313 D SurfaceFlinger: Finished set power mode=2, type=0
+01-04 11:07:53.039   393   393 I rmt_storage: type=1400 audit(0.0:176): avc: denied { write } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=socket permissive=1
+01-04 11:07:53.039   393   393 W rmt_storage: type=1300 audit(0.0:176): arch=40000028 syscall=290 per=800008 success=yes exit=14 a0=d a1=b0010020 a2=e a3=0 items=0 ppid=1 auid=4294967295 uid=9999 gid=3004 euid=9999 suid=9999 fsuid=9999 egid=3004 sgid=3004 fsgid=3004 tty=(none) ses=4294967295 exe="/system/bin/rmt_storage" subj=u:r:init:s0 key=(null)
+01-04 11:07:53.039   236   236 W auditd  : type=1306 audit(0.0:176): saddr=1B0000B0020108B00000000012000000500608B0
+01-04 11:07:53.039   236   236 W auditd  : type=1320 audit(0.0:176): 
+01-04 11:07:53.042   362   393 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0xa msg_id=3: Bytes written = 1572864
+01-04 11:07:53.042   362   393 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0xa msg_id=3: Send response: res=0 err=0
+01-04 11:07:53.043   362   393 I rmt_storage: rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 About to block rmt_storage client thread (th_id: -1343444624) wakelock released: 1, error no: 0
+01-04 11:07:53.043   362   393 I rmt_storage: 
+01-04 11:07:53.043   362   362 I rmt_storage: rmt_storage_disconnect_cb: clnt_h=0x0x5 conn_h=0x0xb000c050
+01-04 11:07:53.049   416   416 I init    : type=1400 audit(0.0:177): avc: denied { execute_no_trans } for path="/system/bin/sh" dev="mmcblk0p23" ino=2879 scontext=u:r:init:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+01-04 11:07:53.638   414   423 D vndksupport: Loading /vendor/lib/egl/libEGL_adreno.so from current namespace instead of sphal namespace.
+01-04 11:07:53.641   414   423 D libEGL  : loaded /vendor/lib/egl/libEGL_adreno.so
+01-04 11:07:53.642   414   423 D vndksupport: Loading /vendor/lib/egl/libGLESv1_CM_adreno.so from current namespace instead of sphal namespace.
+01-04 11:07:53.643   414   423 D libEGL  : loaded /vendor/lib/egl/libGLESv1_CM_adreno.so
+01-04 11:07:53.676   414   423 D vndksupport: Loading /vendor/lib/egl/libGLESv2_adreno.so from current namespace instead of sphal namespace.
+01-04 11:07:53.686   414   423 D libEGL  : loaded /vendor/lib/egl/libGLESv2_adreno.so
+01-04 11:07:53.723   414   423 I Adreno-EGL: <qeglDrvAPI_eglInitialize:379>: QUALCOMM Build: 10/09/15, 6cbbf7d, I3193f6e94a
+01-04 11:07:53.728   414   423 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+01-04 11:07:53.728   414   423 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+01-04 11:07:53.729   414   423 W Adreno-EGL: <qeglDrvAPI_eglGetConfigAttrib:607>: EGL_BAD_ATTRIBUTE
+01-04 11:07:53.730   414   423 D vndksupport: Loading /vendor/lib/hw/gralloc.msm8226.so from current namespace instead of sphal namespace.
+01-04 11:07:53.812   414   423 D BootAnimation: BootAnimationShownTiming start time: 47665ms
+01-04 11:07:53.889   414   423 D vndksupport: Loading /vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+01-04 11:07:53.891   414   423 D vndksupport: Loading /vendor/lib/hw/gralloc.msm8226.so from current namespace instead of sphal namespace.
+01-04 11:07:53.911   313   313 I SurfaceFlinger: Enter boot animation
+01-04 11:07:53.923   313   313 E qdoverlay: Bad ov dump:  mdp_overlay z=0 fg=0 alpha=255 mask=-1 flags=0x220000 id=-1
+01-04 11:07:53.923   313   313 E qdoverlay: src msmfb_img w=736 h=1280 format=13 MDP_RGBA_8888
+01-04 11:07:53.923   313   313 E qdoverlay: src_rect mdp_rect x=0 y=0 w=720 h=1280
+01-04 11:07:53.923   313   313 E qdoverlay: dst_rect mdp_rect x=0 y=0 w=720 h=1280
+01-04 11:07:53.927   313   313 D qdutils : DEBUG_CALC_FPS: 0
+01-04 11:07:53.927   313   313 D qdutils : period: 10
+01-04 11:07:53.927   313   313 D qdutils : ignorethresh_us: 500000
+01-04 11:08:12.659   260   260 I healthd : type=1400 audit(0.0:191): avc: denied { read } for name="type" dev="sysfs" ino=19681 scontext=u:r:healthd:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:08:12.659   260   260 I healthd : type=1400 audit(0.0:191): avc: denied { open } for name="type" dev="sysfs" ino=19681 scontext=u:r:healthd:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+01-04 11:08:52.407   290   296 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+01-04 11:09:52.446   290   297 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+01-04 11:10:52.487   290   297 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+01-04 11:11:52.526   290   297 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+01-04 11:12:52.565   290   296 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+01-04 11:13:52.606   290   298 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+01-04 11:14:52.645   290   302 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+01-04 11:15:52.688   290   302 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+01-04 11:16:52.733   290   296 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+01-04 11:17:52.774   290   298 E QMI_FW  : QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
